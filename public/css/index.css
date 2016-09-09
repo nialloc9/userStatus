@@ -1,0 +1,62 @@
+.status-area{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#createStatus{
+    width: 400px;
+    height: 150px;
+}
+
+.createStatusBtn{
+    margin-top: 10px;
+    margin-right: 320px;
+    height: 40px;
+    width: 80px;
+    color: darkblue;
+    font-size: 15px;
+    background-color: aliceblue;
+}
+
+.status-wrapper{
+    margin-top: 20px;
+    background-color: aliceblue;
+}
+
+.status{
+    width: 360px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: #fff
+}
+
+.status-contents{
+    padding: 10px 10px 10px 10px;
+}
+
+.status-profile-image{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+}
+
+.status-username{
+    padding-bottom: 10px;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+.status-image{
+    width: 100%;
+    height: 230px;
+    margin-bottom: 10px;
+}
+
+.status-text{
+    padding-bottom: 10px;
+}
