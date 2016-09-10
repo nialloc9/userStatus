@@ -5,12 +5,12 @@
     align-items: center;
 }
 
-#createStatus{
+#newStatusText{
     width: 400px;
     height: 150px;
 }
 
-.createStatusBtn{
+.newStatusBtn{
     margin-top: 10px;
     margin-right: 320px;
     height: 40px;

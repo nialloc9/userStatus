@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<link rel="icon" type="image/ico" href="images/logo.png">
+<link rel="icon" type="image/ico" href="res/images/logo.png">
 <html>
 <head>
     <!-- META TAGS -->
@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="public/css/general.css">
 
     <!-- CSS - CUSTOM -->
-    <link rel="stylesheet" href="public/css/index.css">
+    <link rel="stylesheet" href="public/css/status.css">
 
     <!-- LIB -->
     <script type="text/javascript" src="public/js/lib/jquery.lib.js"></script>
@@ -33,6 +33,9 @@
     <!-- JS - GENERAL -->
     <script src="public/js/general.js"></script>
 
+    <!-- JS CONTROLLER -->
+    <script src="public/js/controller/userStatus.controller.js"></script>
+
     <!-- JS - CUSTOM -->
     <script src="public/js/general.js"></script>
     <script src="public/js/index.js"></script>
@@ -40,8 +43,10 @@
 <body>
 
 <!-- HIDDEN INPUTS -->
-<input type="hidden" class="form-control csrfToken" id="csrfToken"/>
-<input type="hidden" class="timestamp" id="timestamp"/>
+<input type="hidden" id="authId" value="2"> <!-- auth id -->
+<input type="hidden" class="form-control csrfToken" id="csrfToken">
+<input type="hidden" class="timestamp" id="timestamp">
+<input type="hidden" value="" id="newStatusImage">
 
 <!-- MAIN BODY -->
 <div class="main-body-container">
@@ -52,16 +57,21 @@
     <div class="main-area-container">
         <div class="row">
             <div class="col-sm-6 status-area">
-                <textarea id="createStatus" cols="30" rows="10"></textarea>
-                <button class="btn createStatusBtn">Post</button>
+                <textarea id="newStatusText" cols="30" rows="10"></textarea>
+                <button class="btn newStatusBtn" id="newStatusBtn">Post</button>
 
                 <div class="status-wrapper">
+
+                    <!-- new status area -->
+                    <div id="newStatusArea"></div>
+
+                    <!-- existing status area -->
                     <div class="status">
                         <div class="status-contents">
-                            <img class="img-circle status-profile-image" src="res/images/profileImages/noProfilePic.jpg" alt="Mountain View">
+                            <img class="img-circle status-profile-image" src="res/images/profileImages/noProfilePic.jpg" alt="Profile Picture">
                             <a href="#"><p class="status-username">Niall O Connor</p></a>
                             <div class="status-image-wrapper">
-                                <img class="img-rounded status-image" src="res/images/statusImages/14608864266.jpg" alt="Mountain View">
+                                <img class="img-rounded status-image" src="res/images/statusImages/14608864266.jpg" alt="Status Image">
                             </div>
                             <p class="status-text">
                                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
